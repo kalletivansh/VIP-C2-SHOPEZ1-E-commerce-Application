@@ -307,14 +307,16 @@ export default function App() {
               </button>
             </aside>
           </>
-        ) : (
+      ) : (
           /* Full Seller Dashboard View */
-          <SellerDashboard
-            analytics={analytics}
-            orders={orders}
-            onUpdateOrderStatus={handleUpdateOrderStatus}
-            onClose={() => setActiveTab('catalog')}
-          />
+          <div className="flex-1 h-full min-h-0 overflow-hidden flex flex-col">
+            <SellerDashboard
+              analytics={analytics}
+              orders={orders}
+              onUpdateOrderStatus={handleUpdateOrderStatus}
+              onClose={() => setActiveTab('catalog')}
+            />
+          </div>
         )}
       </main>
 
